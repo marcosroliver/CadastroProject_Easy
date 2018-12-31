@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="content-type" content="text/html; charset=ISO-8859" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link type="text/css" rel="stylesheet" href="_css/main.css" />
+        <link type="text/css" rel="stylesheet" href="_css/menu.css" />
+        <link rel="icon" href="favicon.png">
+        <script type="text/javascript" src="_js/main.js"></script>
+        <title>Lista Easy</title>
+
+    </head>
+    <body>
+        <!--#include file="footer.html" -->
+        <div>
+            <h1>LISTA</h1>
+            <div style="width: 100%;margin-right:10%">
+              <ul id="lista"></ul>
+            </div>
+        </div>    
+        <script type = "application/javascript">
+            function abreItem (a){
+                var item = document.getElementById("li_"+a);
+
+                if (item.querySelectorAll("div")[1].style.display === "none") {
+                    item.querySelectorAll("div")[1].style.display = "block";
+                    item.querySelectorAll("div")[0].style.display = "none";
+                } 
+            };
+
+            function fechaItem (a){
+                var item = document.getElementById("li_"+a);
+
+                if (item.querySelectorAll("div")[1].style.display === "block") {
+                    item.querySelectorAll("div")[1].style.display = "none";
+                    item.querySelectorAll("div")[0].style.display = "block";
+                } 
+            };
+
+            function excluirItem(a){
+                var listagem = localStorage.getItem ("lista");
+                var objLista = JSON.parse(listagem);
+                objLista = objLista - objLista[a];
+                localStorage.setItem("lista",JSON.stringify(objLista));
+            }
+            var myJson = JSON.parse(localStorage.getItem("lista"));
+            var liItem ="";
+            for (var i=0; i < myJson.length; i++) {
+                liItem = liItem + '<li id ="li_'+i+'" onclick="abreItem('+i+')"><div id="div_name" class="div_name">'+myJson[i].name+'</div><div id="div_form" style="display:none;padding: 10px;"><table width="100%"><tr><td style="width: 98%" rowspan="3"><form method="post"><input type="text" id="id_nome"  name="nome" pattern="[A-Z][a-z].*" value="'+myJson[i].name+'" min="3" required onblur=""/><input type="email" id="id_email" name="e-mail" pattern="" value="'+myJson[i].email+'" onblur="" /><input type="text" id="id_cpf" name="cpf" value="'+myJson[i].cpf+'" onblur="" /><input type="text" id="id_tel" name="telefone" pattern="[0-9]*." value="'+myJson[i].phone+'" onblur="" /></form></td><td><a href="#" onclick="alert(\'teste\')"><img class="btn_confirma"/></a></td></tr><tr><td><a href="javascript:fechaItem('+i+')"><img class="btn_cancela"/></a></td></tr><tr><td><a href="javascript:excluirItem('+i+')"><img class="btn_excluir"/></a></td></tr></table></div></li>';
+            }
+            document.getElementById("lista").innerHTML = liItem;
+        </script>
+    </body>
+</html>

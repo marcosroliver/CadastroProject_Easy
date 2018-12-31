@@ -1,0 +1,6 @@
+<nav id="menu">
+	<ul>
+	    <li><a href="cadastro.shtm">Cadastro</a></li>
+	    <li><a href="lista.shtm">Lista</a></li>
+	<ul>
+</nav>

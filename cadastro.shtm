@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="_css/main.css" />
+    <link type="text/css" rel="stylesheet" href="_css/menu.css" />
+    <link rel="icon" href="favicon.png">
+    <script type="text/javascript" src="_js/main.js"></script>
+    <title>Cadastro Easy</title>
+</head>
+<body style="background-color:#ffffff;">
+    <!--#include file="_inc/menu.shtm" -->
+    <div>
+        <h1>Cadastro</h1>
+            <br />
+            <form method="POST" onsubmit="gravarRegistro();">
+
+            <p>Nome completo [sem abreviações]</p>
+            <input type="text" id="id_nome"  name="nome" pattern="^[A-z]{3,}*." value="" min="3" required onblur="validar('nome');verficaInputs();"/>
+                <span class="msg_nome" id="msg_nome"></span>
+
+           <p>E-mail</p>
+                <input type="email" id="id_email" name="e-mail" value="" onblur="validar('email');verficaInputs();" onkeyup="" />
+                <span class="msg_nome" id="msg_email"></span>
+
+            <p>CPF</p>
+                <input type="text" id="id_cpf" name="cpf" value="" onblur="validar('cpf');verficaInputs();" onkeyup=""/>
+                <span class="msg_nome" id="msg_cpf"></span>
+
+            <p>Telefone</p>
+                <input type="text" id="id_tel" name="telefone" pattern="\([0-9][0-9]\)[0-9]*." value="" onblur="validar('tel');verficaInputs();" onkeyup=""/>
+                <span class="msg_nome" id="msg_tel"></span>
+
+            <input type="submit" class="btn_cadastrar" disabled="disabled" name="btn_cadastrar" value="Cadastrar"/>
+            </form>
+    </div>
+    
+    <script type="text/javascript" src="_js/cadastro.js" charset="utf-8"></script>
+   
+</body>
+</html>
