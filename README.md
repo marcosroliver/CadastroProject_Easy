@@ -1,12 +1,19 @@
 # CadastroProject_Easy
 O CadastroProject é um pequeno sistema de cadastramento de usuários, guardando os seguintes dados localmente:
+
 •	Nome;
+
 •	CPF;
+
 •	Telefone;
+
 •	Email. 
+
 Pelo sistema é possível efetuar inclusão, exclusão , alteração e listagem dos itens.
-Instalação	
-Todo o conteúdo do projeto está disponível no endereço https://proloclocacoes.com.br/cadastroproject_easy/lista.shtm, facilitando o acesso por dispositivos móveis e desktop. 
+
+## **Instalação**	
+
+Todo o conteúdo do projeto está disponível no endereço https://proloclocacoes.com.br/cadastroproject_easy/cadastro.shtm, facilitando o acesso por dispositivos móveis e desktop. 
 Caso ache conveniente baixar o projeto e instalar localmente basta efetuar a instalação do pacote como uma estrutura de site convencional dentro de um Servidor Web (recomendamos o uso do IIS).
 
 ## **Desenvolvimento**
