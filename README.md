@@ -21,10 +21,11 @@ Caso ache conveniente baixar o projeto e instalar localmente basta efetuar a ins
 ### _Sobre o Build_
 
 Todo o conteúdo foi criado utilizando:
-•	SHTM;
-•	JavaScript;
-•	CSS;
-•	SVG.
+-	SHTM;
+-	JavaScript;
+-	CSS;
+-	SVG.
+
 Não foi utilizado nenhum Framework, Biblioteca ou base de dados externa para a construção de dessa aplicação.
 
 ### _Sobre o Requisitos_ 
