@@ -45,3 +45,8 @@ Orientamos a utilização do IIS como serviço de internet para alocação do co
 
 5.	Pelo navegador já será possível acessar o site por meio do endereço http://localhost:(porta escolhida):
  
+### _Sobre os Testes_
+
+Para facilitar os testes, criamos um passo a passo que esta disponivel no seguinte documento:
+
+- 
