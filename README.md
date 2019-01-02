@@ -50,4 +50,4 @@ Orientamos a utilização do IIS como serviço de internet para alocação do co
 
 Para facilitar os testes, criamos um passo a passo que esta disponivel no seguinte documento:
 
-- 
+https://github.com/marcosroliver/CadastroProject_Easy/blob/master/CadastroProject_Easy-Teste.pdf 
